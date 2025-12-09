@@ -1,0 +1,802 @@
+.myDiv {
+  text-align: center;
+  padding: 20px;
+  margin-top: 100px;
+  font-family: Arial, sans-serif;
+}
+
+.myDiv h2 {
+  text-transform: capitalize;
+  font-size: 30px;
+  color: #000;
+  margin: 0;
+     
+}
+
+/* Responsive typography for all device sizes */
+@media (max-width: 1200px) {
+  .myDiv h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 992px) {
+  .myDiv h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .myDiv h2 {
+    font-size: 20px;
+    text-align: justify;
+    text-align-last:center;
+  
+  }
+}
+
+@media (max-width: 480px) {
+  .myDiv h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 320px) {
+  .myDiv h2 {
+    font-size: 16px;
+  }
+}
+
+ .wn-mission {
+    background: #000;               /* black background */
+    padding: 20px 20px;
+    margin-bottom: 20px;
+ 
+  }
+
+  .wn-container {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .wn-title {
+    color: #fff;                    /* white title */
+    font-size: 30px;
+ 
+    text-align: center;
+    font-family: Inter, sans-serif;
+  }
+
+  .wn-text  {
+    color: #e5e5e5;                 /* soft white text */
+    font-size: 20px;
+    line-height: 1.6;
+    font-family: Inter, sans-serif;
+   text-align: justify;
+ 
+    text-transform:capitalize ;
+    padding-left: 20px;
+    
+}
+
+
+
+  /* Stats Section Background */
+.wn-stats {
+  background: #000;
+  color: #fff;
+  padding: 60px 20px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+/* Container */
+.wn-stats-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Cards Grid */
+.wn-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Each Card */
+.wn-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: 0.25s ease;
+}
+
+/* Hover Effect */
+.wn-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.20);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Value Number */
+.wn-card-value {
+  font-size: 30px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.wn-card-suffix {
+  font-size:30px;
+  font-weight: 700;
+  margin-left: 4px;
+  opacity: 0.9;
+}
+
+/* Title */
+.wn-card-title {
+  font-size: 20px;
+  color: #e5e7eb;
+  margin: 0;
+  font-weight: 700;
+    text-transform: capitalize
+}
+
+/* Meta text */
+.wn-card-meta {
+  font-size: 18px;
+  color: #d1d5db;
+  line-height: 1.45;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+/* ===================== */
+/* RESPONSIVE STYLES     */
+/* ===================== */
+
+/* --- Tablet (max-width: 1024px) --- */
+@media (max-width: 1024px) {
+
+  .wn-mission,
+  .wn-stats {
+    padding: 40px 10px;      /* reduce left/right spacing */
+  }
+
+  .wn-container,
+  .wn-stats-inner {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .wn-cards {
+    grid-template-columns: repeat(2, 1fr);  /* 3 → 2 columns */
+  }
+
+  .wn-title {
+    font-size: 26px;
+  }
+
+  .wn-text {
+    font-size: 18px;
+    padding-left: 0;         /* remove left padding */
+  }
+
+  .wn-card-value {
+    font-size: 26px;
+  }
+}
+
+
+/* --- Mobile (max-width: 768px) --- */
+@media (max-width: 768px) {
+
+  .wn-mission,
+  .wn-stats {
+    padding: 30px 10px;      /* remove big side spacing */
+  }
+
+  .wn-cards {
+    grid-template-columns: 1fr;  /* single column */
+  }
+
+  .wn-title {
+    font-size: 24px;
+  }
+
+  .wn-text {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .wn-card-value {
+    font-size: 22px;
+  }
+
+  .wn-card-title {
+    font-size: 18px;
+  }
+
+  .wn-card-meta {
+    font-size: 16px;
+  }
+}
+
+
+/* --- Small Mobile (max-width: 480px) --- */
+@media (max-width: 480px) {
+
+  .wn-mission,
+  .wn-stats {
+    padding: 20px 5px;      /* almost edge-to-edge */
+  }
+
+  .wn-title {
+    font-size: 20px;
+  }
+
+  .wn-text {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .wn-card-value {
+    font-size: 20px;
+  }
+
+  .wn-card-title {
+    font-size: 16px;
+  }
+
+  .wn-card-meta {
+    font-size: 14px;
+  }
+}
+
+
+/* Section background */
+.wn-community {
+  background: #fff;
+  padding: 10px 20px;
+  color: #fff;
+  font-family: Inter, sans-serif;
+}
+
+/* Two-column layout */
+.wn-community-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Left text */
+.wn-left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.wn-heading {
+  font-size: 30px;
+  font-weight: 800;
+  margin: 0;
+  color: #000;
+ 
+  text-transform: capitalize;
+}
+
+.wn-heading span {
+  color: #000; /* Accent highlight */
+}
+
+.wn-desc {
+  font-size:20px;
+  line-height: 1.7;
+  color: #000;
+  max-width: 90%;
+  text-transform: capitalize;
+  text-align: justify;
+  margin: 0;
+}
+
+/* Right image */
+.wn-right img {
+  width: 80%;
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(255,255,255,0.08);
+}
+
+/* Responsive adjustments */
+  @media (max-width: 900px) {
+    .wn-community-container {
+      grid-template-columns: 1fr;
+      gap: 30px;
+      padding-bottom: 20px;
+    }
+    .wn-desc {
+      max-width: 100%;
+    }
+    .wn-right img {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .wn-heading {
+      font-size: 24px;
+    }
+    .wn-desc {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .wn-community {
+      padding: 10px 12px;
+    }
+  }
+
+/* SECTION BACKGROUND & TEXT */
+.wn-future-commerce {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+  width: 100%;
+  font-family: Inter, sans-serif;
+  margin-bottom: 20px;
+}
+
+/* CONTAINER GRID */
+.wn-fc-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* LEFT SIDE */
+.wn-fc-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.wn-fc-heading {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.wn-fc-desc {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+/* BUTTON */
+.wn-fc-button {
+  background-color: #fff;
+  color: #000;
+  width: 40%;
+  border: none;
+  padding: 12px 28px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* RIGHT SIDE FIX – CENTER IMAGE */
+.wn-fc-right {
+  display: flex;
+  justify-content: center;   /* horizontally center */
+  align-items: center;       /* vertical align (optional) */
+}
+
+.wn-fc-right img {
+  width: 80%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+.wn-fc-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MOBILE RESPONSIVE (max-width: 768px) */
+@media (max-width: 768px) {
+
+  /* Make single column layout */
+  .wn-fc-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0;                 /* remove left/right spacing */
+    width: 100%;
+  }
+
+  /* Full width left side */
+  .wn-fc-left {
+    padding: 0 10px;            /* minimal spacing */
+  }
+  .wn-fc-desc{
+    font-size: 18px;
+    text-align: justify;
+  }
+
+.wn-fc-heading {
+  font-size: 20px;
+  text-align: justify;
+  line-height: 1.5; /* <-- adds extra spacing */
+ 
+}
+
+  /* Center the image and remove side gaps */
+  .wn-fc-right {
+    padding: 0;                 /* remove spacing */
+    justify-content: center;
+  }
+
+  .wn-fc-right img {
+    width: 100%;                /* full width image */
+    border-radius: 10px;
+  }
+
+  /* Full-width button on mobile */
+  .wn-fc-button {
+    width: 100%;
+  }
+}
+
+
+
+/* ----------------------- */
+/* FAQ SECTION STYLING     */
+/* ----------------------- */
+
+.faq1-container {
+  width: 80%;               /* full width */
+  max-width: 1300px;
+  margin: 20px auto;
+  padding: 0 10px;           /* small padding for mobile */
+}
+
+.faq1-container h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #000;
+    text-transform: capitalize;
+}
+
+/* GRID: 3 COLUMNS — CENTERED */
+.faq1-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+}
+
+/* Each FAQ Box */
+.faq1-item {
+  background: #ffffff;
+  color: #000;
+  padding: 18px 22px;
+  border-radius: 12px;
+  border: 2px solid #e0e0e0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.faq1-item:hover {
+  background: #f8f8f8;
+  border-color: #cfcfcf;
+}
+
+/* Question Row */
+.faq1-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.faq1-question h3 {
+  font-size: 17px;
+  text-transform: capitalize;
+  font-weight: 600;
+  margin: 0;
+  color: #000;
+}
+
+.faq1-question span {
+  font-size: 22px;
+  font-weight: 700;
+
+}
+
+/* Answer */
+.faq-answer {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+
+}
+
+.faq-answer p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #000;
+    text-transform: capitalize;
+}
+
+/* Active State */
+.faq1-item.active {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.faq1-item.active h3,
+.faq1-item.active p,
+.faq1-item.active span {
+  color: #fff !important;
+}
+
+/* ----------------------- */
+/* RESPONSIVE LAYOUT       */
+/* ----------------------- */
+
+@media (max-width: 1200px) {
+  .faq1-grid {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+@media (max-width: 900px) {
+  .faq1-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .faq1-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+.faq1-container h2{
+  font-size: 20px;
+}
+.faq1-item{
+  min-height: 20px;
+}
+  .faq1-container {
+    padding: 0 5px; 
+    width:100%; /* minimal padding on small screens */
+  }
+}
+
+/* ==============================
+   QUOTE BLOCK (FULL WIDTH)
+============================== */
+.quote-block {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px 0; /* removed left/right padding */
+  margin: 0;       /* removed margin */
+  background: #ffffff;
+}
+
+/* ========== IMAGE ========== */
+.quote-media {
+  width: 250px;
+  height: 250px;
+  flex-shrink: 0;
+}
+
+.quote-media img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* ========== TEXT CONTENT ========== */
+.quote-content {
+  max-width: 600px;
+}
+
+.quote-content blockquote {
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 500;
+  margin-bottom: 15px;
+  max-width: 1000px;
+  text-align: justify;
+  color: #111;
+  text-transform: capitalize;
+}
+
+.quote-author {
+  font-size: 16px;
+  color: #444;
+  text-transform: capitalize;
+}
+
+.quote-author strong {
+  font-weight: 700;
+  color: #000;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+
+/* ---------- Tablets ---------- */
+@media (max-width: 992px) {
+  .quote-block {
+    gap: 25px;
+    padding: 30px 0;
+  }
+
+  .quote-media {
+    width: 200px;
+    height: 200px;
+  }
+
+  .quote-content blockquote {
+    font-size: 18px;
+  }
+}
+
+/* ---------- Tablets + Large Phones ---------- */
+@media (max-width: 768px) {
+  .quote-block {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .quote-media {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 10px;
+  }
+
+  .quote-content {
+    max-width: 90%;
+  }
+}
+
+/* ---------- Small Phones ---------- */
+@media (max-width: 480px) {
+  .quote-media {
+    width: 150px;
+    height: 150px;
+  }
+
+  .quote-content blockquote {
+    font-size: 16px;
+  }
+
+  .quote-author {
+    font-size: 14px;
+  }
+}
+
+/* FULL WIDTH – NO LEFT/RIGHT SPACE */
+.cont {
+  width: 100%;
+  max-width: 100%;  /* remove internal limits */
+  margin: 0;        /* remove outer spacing */
+  padding: 0;       /* remove inside spacing */
+  margin-bottom: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+}
+
+/* HEADING */
+.cont h2 {
+  text-align: center !important;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 30px 0;
+  color: #000;
+}
+
+/* CARD */
+.grid {
+  background-color: #121212;
+  border-radius: 12px;
+  padding: 25px 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+/* CARD TITLE */
+.grid h2 {
+  margin: 0 0 12px 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #e0e0e0;
+  text-transform: capitalize;
+  text-align: justify;
+}
+
+/* CARD TEXT */
+.grid p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #ccc;
+  text-transform: capitalize;
+  text-align: justify;
+}
+
+/* MAIN GRID – NO SIDE SPACES */
+.grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  
+  grid-template-rows: repeat(2, auto);
+  gap: 25px 30px;
+  padding: 0 10px;  /* small safety padding (optional) */
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* FULL width on mobile */
+    padding: 0;
+  }
+}
+
+/* fade states */
+.fade-in, .fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.show { opacity: 1; transform: translateY(0); }
+.fade-up.show { opacity: 1; transform: translateY(0); }
+
+/* optional: make sure images have display block to avoid gaps */
+.quote-media img, .wn-right img, .wn-fc-right img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+

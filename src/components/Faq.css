@@ -1,0 +1,99 @@
+.info-main {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #fff;
+  color: #ffffff;              /* default text white */
+}
+
+/* Two-row layout */
+.info-row {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  margin-top: 80px;
+}
+
+.info-box {
+  width: 500px;
+  background: #111111;         /* dark card background */
+  border-radius: 12px;
+  padding: 25px 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #ffffff;              /* text inside boxes white */
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9);
+}
+
+/* Anchor styled as button */
+.info-link {
+  display: inline-block;
+  width: 100%;
+  background-color: #ffffff;   /* white button */
+  color: #000000;              /* black text on button */
+  text-decoration: none;
+  text-align: center;
+  padding: 14px 0;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.info-link:hover {
+  background-color: #e5e5e5;   /* light grey hover */
+  color: #000000;
+}
+
+/* Tablet and below */
+@media (max-width: 992px) {
+  .info-main {
+    padding: 40px 15px;
+  }
+
+  .info-row {
+    gap: 25px;
+    margin-top: 50px;
+  }
+
+  .info-box {
+    width: 420px;
+  }
+}
+
+/* ============ Mobile: stack, center, full width, no bottom gap ============ */
+@media (max-width: 600px) {
+  .info-main {
+    padding: 40px 0 0;  
+    margin-top: 40px;    
+    margin-bottom: 20px;        
+  }
+
+  .info-row {
+    flex-direction: column;            /* stack boxes */
+    align-items: center;               /* center them */
+    gap: 12px;                         /* tight vertical gap */
+    margin-top: 20px;
+    margin-bottom: 0;                  /* remove bottom space */
+    width: 100%;
+  }
+
+  .info-box {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;                  /* optional: stretch edge-to-edge look */
+    box-shadow: none;                  /* cleaner mobile look; delete if you want shadow */
+  }
+
+  .info-link {
+    border-radius: 0;                  /* match box edge-to-edge */
+    width: 100%;
+    padding: 16px 0;
+    font-size: 1rem;
+  }
+}

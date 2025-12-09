@@ -1,0 +1,819 @@
+/* Apply capitalization to all headings + paragraphs */
+h1, h2, h3, h4, h5, h6, p {
+  text-transform: capitalize;
+}
+
+.box-container {
+  display: flex;
+  align-items: center;       
+  justify-content: center;   
+  gap: 7px;                
+  max-width: 1400px;
+  margin: 100px auto 0;
+  padding: 3rem 2rem;
+  background: #000000;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Both columns take equal width */
+.box-left,
+.box-right {
+  flex: 1 1 0;
+  max-width: 550px;
+  box-sizing: border-box;
+}
+
+/* Left side */
+.box-left {
+  padding-right: 0;
+}
+
+.box-left h1 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+  color: #ffffff;
+  width: 100%;
+  min-width: max-content;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.35), 0 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 600px) {
+  .box-left h1 {
+    font-size: 20px;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.25em; /* smaller spacing for better look */
+    text-align: justify;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 2px 4px rgba(0, 0, 0, 0.7);
+    min-width: auto;
+  }
+}
+
+
+.box-left p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.box-left button {
+  display: inline-block;
+  background: #ffffff;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0.85rem 3rem;
+  border: none;
+  border-radius: 80px;
+  box-shadow:
+    0 5px 15px rgba(255, 255, 255, 0.3),
+    inset 0 -3px 5px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.box-left button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 25px rgba(255, 255, 255, 0.4),
+    inset 0 -4px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Right side image */
+.box-right {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.box-right img {
+  width: 100%;
+  max-width: 410px;
+  display: block;
+  margin: 0 auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+
+/* Responsive for all devices */
+@media (max-width: 1024px) {
+  .box-container {
+    max-width: 90%;
+    gap: 16px;
+  }
+
+  /* let flex handle widths, don't cap to 48% */
+  .box-left,
+  .box-right {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+ .box-container {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 30px;
+margin-top: 100px;
+    width: 100%;      
+    max-width: 100%;   
+  
+    border-radius: 0;  
+  }
+
+
+
+
+  .box-left,
+  .box-right {
+    max-width: 100%;
+    width: 100%;        
+    text-align: center;
+  }
+
+  .box-left button {
+    width: 100%;
+    padding: 1rem;
+  }
+ 
+}
+
+@media (max-width: 480px) {
+  .box-left h1 {
+    font-size: 24px;
+  }
+  .box-left p {
+    font-size: 16px;
+  }
+  .box-left button {
+    font-size: 16px;
+    padding: 1rem 1.5rem;
+  }
+  .box-right img {
+    max-width: 100%;   
+    width: 100%;
+  }
+  
+}
+
+/* ===== Second Box (image left, content right) ===== */
+
+.image-left-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-width: 1400px;
+  margin: 10px auto 0;
+  padding: 3rem 2rem;
+  background: #ffffff; /* white background */
+  color: #000000;      /* default text black */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Columns share space equally */
+.image-column,
+.content-column {
+  flex: 1 1 0;
+  max-width: 550px;
+  box-sizing: border-box;
+}
+
+/* Image side */
+.image-column {
+  text-align: center;
+}
+
+.image-column img {
+  width: 100%;
+  max-width: 410px;
+  display: block;
+  margin: 0 auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  cursor: pointer;
+}
+
+/* Content side */
+.content-column h1 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+  color: #000000; /* black text */
+  text-shadow:
+    0 0 4px rgba(0, 0, 0, 0.08),
+    0 2px 5px rgba(0, 0, 0, 0.12);
+}
+
+.content-column p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  color: #111111; /* slightly softer black */
+  text-shadow: none; /* cleaner on light background */
+}
+
+.content-column button {
+  display: inline-block;
+  background: #000000;  /* black button */
+  color: #ffffff;       /* white text on button */
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0.85rem 3rem;
+  border: none;
+  border-radius: 80px;
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.2),
+    inset 0 -3px 5px rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  position: relative;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.content-column button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.28),
+    inset 0 -4px 6px rgba(255, 255, 255, 0.22);
+  background: #111111;
+}
+
+/* ===== Responsive for all devices ===== */
+
+@media (max-width: 1024px) {
+  .image-left-section {
+    max-width: 90%;
+    gap: 16px;
+  }
+
+  .image-column,
+  .content-column {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-left-section {
+    flex-direction: column;   /* stack image + text */
+    padding: 2rem 1rem;
+    gap: 30px;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+  }
+
+  .image-column,
+  .content-column {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .content-column button {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-column h1 {
+    font-size: 24px;
+  }
+
+  .content-column p {
+    font-size: 16px;
+  }
+
+  .content-column button {
+    font-size: 16px;
+    padding: 1rem 1.5rem;
+  }
+
+  .image-column img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* ===== Third Box (We've Got It All) ===== */
+
+.third-box-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  max-width: 1400px;
+  margin: 10px auto 0;
+  padding: 3rem 2rem;
+  background: #000000;          /* same black as first box */
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Both columns take equal width */
+.third-box-left,
+.third-box-right {
+  flex: 1 1 0;
+  max-width: 550px;
+  box-sizing: border-box;
+}
+
+/* Right side = TEXT (because in JSX you named it third-box-right) */
+.third-box-right h1 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.35),
+    0 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.third-box-right p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.third-box-right button {
+  display: inline-block;
+  background: #ffffff;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0.85rem 3rem;
+  border: none;
+  border-radius: 80px;
+  box-shadow:
+    0 5px 15px rgba(255, 255, 255, 0.3),
+    inset 0 -3px 5px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.third-box-right button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 25px rgba(255, 255, 255, 0.4),
+    inset 0 -4px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Left side = IMAGE */
+.third-box-left {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.third-box-left img {
+  width: 100%;
+  max-width: 410px;
+  display: block;
+  margin: 0 auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+
+
+/* ===== Responsive for all devices (same pattern as .box-container) ===== */
+
+@media (max-width: 1024px) {
+  .third-box-container {
+    max-width: 90%;
+    gap: 16px;
+  }
+
+  .third-box-left,
+  .third-box-right {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .third-box-container {
+    flex-direction: column;   /* stack text + image */
+    padding: 2rem 1rem;
+    gap: 30px;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+  }
+
+  .third-box-left,
+  .third-box-right {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .third-box-right button {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .third-box-right h1 {
+    font-size: 24px;
+  }
+  .third-box-right p {
+    font-size: 16px;
+  }
+  .third-box-right button {
+    font-size: 16px;
+    padding: 1rem 1.5rem;
+  }
+  .third-box-left img {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+/* ===== Fourth Box (content left, image right) ===== */
+
+.fourth-box-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-width: 1400px;
+  margin: 10px auto 0;
+  padding: 3rem 2rem;
+  background: #ffffff;  /* white background */
+  color: #000000;       /* default text black */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Columns share space equally */
+.fourth-box-left,
+.fourth-box-right {
+  flex: 1 1 0;
+  max-width: 550px;
+  box-sizing: border-box;
+}
+
+/* Content side (left) */
+.fourth-box-left h1 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+  color: #000000; /* black text */
+  text-shadow:
+    0 0 4px rgba(0, 0, 0, 0.08),
+    0 2px 5px rgba(0, 0, 0, 0.12);
+}
+
+.fourth-box-left p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  color: #111111; /* slightly softer black */
+  text-shadow: none; /* cleaner on light background */
+}
+
+.fourth-box-left button {
+  display: inline-block;
+  background: #000000;  /* black button */
+  color: #ffffff;       /* white text on button */
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0.85rem 3rem;
+  border: none;
+  border-radius: 80px;
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.2),
+    inset 0 -3px 5px rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  position: relative;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.fourth-box-left button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.28),
+    inset 0 -4px 6px rgba(255, 255, 255, 0.22);
+  background: #111111;
+}
+
+/* Image side (right) */
+.fourth-box-right {
+  text-align: center;
+}
+
+.fourth-box-right img {
+  width: 100%;
+  max-width: 410px;
+  display: block;
+  margin: 0 auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  cursor: pointer;
+}
+
+/* ===== Responsive for all devices ===== */
+
+@media (max-width: 1024px) {
+  .fourth-box-container {
+    max-width: 90%;
+    gap: 16px;
+  }
+
+  .fourth-box-left,
+  .fourth-box-right {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .fourth-box-container {
+    flex-direction: column;   /* stack text + image */
+    padding: 2rem 1rem;
+    gap: 30px;
+    margin-top: 10px;
+    width: 100%;
+    
+    max-width: 100%;
+    border-radius: 0;
+  }
+
+  .fourth-box-left,
+  .fourth-box-right {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .fourth-box-left button {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .fourth-box-left h1 {
+    font-size: 24px;
+  }
+
+  .fourth-box-left p {
+    font-size: 16px;
+  }
+
+  .fourth-box-left button {
+    font-size: 16px;
+    padding: 1rem 1.5rem;
+  }
+
+  .fourth-box-right img {
+    width: 100%;
+    max-width: 70%;
+ 
+  }
+}
+/* ===== Subscribe Section (matching Third Box style) ===== */
+
+.subscribe-container {
+  max-width: 1400px;
+  margin: 10px auto 40px;
+  padding: 3rem 2rem;
+  background: #000000;      /* same black as third-box */
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+ 
+}
+
+.subscribe-container h2 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+  padding-right: 80px;
+
+  color: #ffffff;
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.35),
+    0 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.subscribe-container {
+  display: flex;
+  flex-direction: column; /* stack children vertically */
+  align-items: center;    /* center horizontally */
+  text-align: center;     /* fallback for text inside children */
+}
+
+.subscribe-container p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+
+
+/* form row similar to your buttons styling */
+
+.subscribe-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Input */
+
+.subscribe-box input[type="email"] {
+  flex: 1 1 auto;
+  padding: 0.9rem 1rem;
+  border-radius: 80px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: #111111;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.subscribe-box input[type="email"]::placeholder {
+  color: #a5a5a5;
+}
+
+.subscribe-box input[type="email"]:focus {
+  border-color: #ffffff;
+  background: #151515;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.4),
+    0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Button reuses the white pill style */
+
+.subscribe-box button {
+  display: inline-block;
+  background: #ffffff;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0.9rem 2.6rem;
+  border: none;
+  border-radius: 80px;
+  box-shadow:
+    0 5px 15px rgba(255, 255, 255, 0.3),
+    inset 0 -3px 5px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.subscribe-box button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 25px rgba(255, 255, 255, 0.4),
+    inset 0 -4px 6px rgba(0, 0, 0, 0.45);
+}
+
+/* ===== Responsive (matches your pattern) ===== */
+
+@media (max-width: 1024px) {
+  .subscribe-container {
+    max-width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  .subscribe-container {
+    flex-direction: column;    /* stack text + image */
+    padding: 20px;                /* remove padding */
+    gap: 10px;                    /* remove gap */
+    margin-top: 0;             /* remove top margin */
+    width: 100%;
+    text-align: center;
+    max-width: 100%;
+    border-radius: 0;
+  }
+
+  .subscribe-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;                    /* remove inner gap */
+    width: 100%;
+  }
+
+ .subscribe-container h2 {
+  text-align: justify;
+  margin: 0;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+
+
+  .subscribe-box input[type="email"],
+  .subscribe-box button {
+    width: 100%;
+    box-sizing: border-box;
+    margin:0;  
+         
+  }
+ 
+  
+}
+@media (max-width: 480px) {
+  .subscribe-container h2 {
+    font-size: 24px;
+  }
+
+  .subscribe-container p {
+    font-size: 14px;
+  }
+}
+
+/* Fade-in for images */
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+}
+
+/* Fade-up for text + containers */
+.fade-up {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in,
+  .fade-up {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+

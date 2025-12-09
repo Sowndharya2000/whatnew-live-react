@@ -1,0 +1,360 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* ===== Full-width Background Wrapper ===== */
+.about-section-wrapper {
+  width: 100%;
+  background-color: #000; /* black background */
+  padding: 20px 20px;
+  box-sizing: border-box;
+  overflow: hidden; /* for fade-up */
+  color: #fff; /* white text for fallback */
+}
+
+/* ===== Inner Container ===== */
+.about-container {
+  max-width: 1500px;
+  margin: 100px auto;
+ 
+  font-family: "Poppins", sans-serif;
+  color: #fff; /* ensure text inside inherits white */
+}
+
+/* ===== About Section (Left Text + Right Image) ===== */
+.divbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 30px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  background-color: #111; /* darker black inside container */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  flex-wrap: wrap;
+  color: #fff; /* force white text inside container */
+}
+
+.divbox-text h2,
+.divbox-text p {
+  color: #fff; /* override any other color */
+  text-transform: capitalize; /* capitalize text */
+ 
+}
+
+
+/* ===== Image Styling ===== */
+.divbox-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== Fade-in & Fade-up Animation ===== */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 1024px) {
+  .divbox-text {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .divbox-container {
+    flex-direction: column; /* stack text + image */
+    text-align: center;
+    padding: 20px;
+  }
+
+  .divbox-text {
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .divbox-image img {
+    max-width: 800px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section-wrapper {
+    padding: 40px 10px;
+  }
+
+  .divbox-text h2 {
+    font-size: 24px;
+  
+  }
+
+  .divbox-text p {
+    font-size: 16px;
+  }
+
+  .divbox-image img {
+    max-width: 250px;
+    margin-top: 20px;
+  }
+}
+
+
+/* ===== Image Grid Section ===== */
+.imagegrid-section {
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 30px !important;
+  font-weight: 700;
+  color: #111;
+ 
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.image-card {
+  background: #fff;
+ 
+ 
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.image-card:hover {
+  transform: scale(1.03);
+}
+
+.image-card img {
+  width: 70%;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .divbox-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+   .image-grid {
+    grid-template-columns: repeat(2, 1fr); /* ✅ 2 columns on mobile */
+    gap: 15px;
+  }
+  .divbox-text {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+  .section-heading {
+    font-size: 26px;
+  }
+}
+.carousel-text-container {
+  width: 100%;
+  min-height: 200px; /* gives height for centering */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center;  
+  margin-top: 50px;
+  padding: 20px 20px;
+  background: #000;       /* black background */
+  color: #fff;            /* white text */
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.carousel-slide {
+  max-width: 800px;
+  margin: 0 auto;
+  transition: opacity 0.8s ease;
+  color: #fff;            /* ensure text inside is white */
+}
+
+.carousel-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;            /* white text */
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: capitalize; /* capitalize text */
+}
+
+.carousel-description {
+  font-size: 1.2rem !important;
+  color: #fff;            /* white text */
+  line-height: 1.8;
+  text-align: center;
+  text-transform: capitalize; /* capitalize text */
+  display: block;
+  margin: 0 auto;
+  max-width: 700px; /* keep paragraph nicely centered */
+}
+
+.carousel-dots {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carousel-title {
+    font-size: 2rem;
+  }
+  .carousel-description {
+    font-size: 1rem !important;
+  }
+}
+/* ===== Stacking Header ===== */
+.stacking-header {
+  width: 100%;
+  text-align: center;         
+  background-color: #fff;     
+  padding: 20px 20px;         
+  box-sizing: border-box;
+  margin-bottom: 0; 
+}
+
+.stacking-header h2 {
+  color: #000;               
+  font-size: 2.5rem;         
+  font-weight: 700;
+  margin: 0; 
+  text-transform: capitalize; 
+  letter-spacing: 1px;        
+}
+
+/* ===== Wrapper ===== */
+.wrap {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+/* ===== Card Grid Container ===== */
+.wrap-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 0;
+}
+
+/* ===== Individual Card ===== */
+.card {
+  position: relative;
+  width: 100%;
+  height: 300px; 
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 0; 
+}
+
+
+
+/* ===== Card Background Image ===== */
+.cards-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;       
+  background-position: center;  
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease;
+}
+
+
+
+/* ===== Optional: Remove default body margin ===== */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .wrap {
+    padding: 0 10px 0 10px !important; /* remove bottom padding */
+    margin-bottom: 0 !important;
+  }
+
+  .wrap-cards {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .card {
+    height: 250px;
+    margin-bottom: 0 !important;
+  }
+
+  .stacking-header h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html, body {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .wrap {
+    padding: 0 2px 0 2px !important; /* remove bottom padding */
+    margin-bottom: 0 !important;
+  }
+
+  .wrap-cards {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .card {
+    height: 200px;
+    margin-bottom: 0 !important;
+  }
+
+  .stacking-header h2 {
+    font-size: 1.4rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

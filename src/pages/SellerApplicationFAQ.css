@@ -1,0 +1,310 @@
+/* ===== GLOBAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}/* ===== Banner Section ===== */
+.banner-section {
+  width: calc(100% - 40px);
+  height: 300px;
+  background-image: url("https://help.whatnot.com/hc/theming_assets/01JV8AH6DVE2S4T1FTQ47FVFZB");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #fff;
+
+  /* ✅ Proper spacing */
+  margin: 12px 20px 20px 20px; /* top, right, bottom, left */
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-sizing: border-box;
+
+  /* ✅ Do NOT hide margins */
+  overflow: visible; 
+}
+.banner-section {
+  margin-top: 105px !important;
+}
+/* ===== Overlay ===== */
+.banner-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+  border-radius: 15px;
+}
+
+/* Ensure content stays above overlay */
+.banner-section * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Breadcrumb ===== */
+.breadcrumb {
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.breadcrumb a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #ffd700; /* gold/yellow highlight */
+   
+}
+
+.breadcrumb span {
+  color: #ddd;
+}
+
+.breadcrumb span {
+  color: #ddd;
+}
+
+/* ===== Heading ===== */
+h1 {
+  font-size: 36px;
+  margin: 0;
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+/* ===== Paragraph ===== */
+p {
+  font-size: 18px;
+  margin: 0;
+  padding-top: 10px;
+  text-align: left;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .banner-section {
+    width: calc(100% - 20px);
+    height: 250px;
+    margin:120px 10px 10px 10px; /* ✅ keep top space on mobile too */
+    padding: 15px 20px;
+  }
+
+  .breadcrumb {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+    padding-bottom: 6px;
+  }
+
+  p {
+    font-size: 14px;
+    padding-top: 6px;
+  }
+}
+
+/* ===== Seller Application FAQ Section ===== */
+.seller-application-faq-section {
+  width: 100%;
+  padding: 50px 0;
+}
+
+/* ===== Content Container ===== */
+.seller-application-faq-content {
+  width: 85%;
+  max-width: 900px;
+  margin: 0 auto;
+  border: 2px solid #f50808;
+  background: linear-gradient(180deg, #ede6e8 0%, #f8f5f7 100%);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  line-height: 1.7;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== Headings ===== */
+.seller-application-faq-content h2 {
+  color: #222;
+  margin-bottom: 15px;
+  text-align: left;
+  font-size: 20px !important;
+  font-weight: 700;
+}
+
+.seller-application-faq-content h3 {
+  color: #111;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 18px !important;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* ===== Paragraphs ===== */
+.seller-application-faq-content p {
+  max-width: 700px;
+  margin-bottom: 18px;
+  color: #444;
+  font-size: 16px !important;
+  line-height: 1.8;
+  word-wrap: break-word;
+ 
+}
+
+/* ===== Links ===== */
+.seller-application-faq-content a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.seller-application-faq-content a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Unordered Lists (if needed) ===== */
+.seller-application-faq-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 25px;
+}
+
+.seller-application-faq-content li {
+  position: relative;
+  margin-bottom: 12px;
+  padding-left: 28px;
+  max-width: 700px;
+  line-height: 1.7;
+  color: #333;
+  font-size: 16px !important;
+  word-wrap: break-word;
+}
+
+.seller-application-faq-content ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #ff6600;
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+/* ===== Note Box (Optional) ===== */
+.seller-application-faq-content .note {
+  background: #d2d6da;
+  border-left: 4px solid #3b82f6;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 20px;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .seller-application-faq-content {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .seller-application-faq-content p,
+  .seller-application-faq-content li {
+    max-width: 100%;
+    text-align: justify;
+    font-size: 16px !important;
+  }
+
+  .seller-application-faq-content h2 {
+    font-size: 18px !important;
+  }
+
+  .seller-application-faq-content h3 {
+    font-size: 16px !important;
+  }
+}
+
+
+/* ===== Seller Getting Started Section ===== */
+.seller-gettingstarted-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers title & card horizontally */
+  justify-content: center;
+  text-align: center; /* Centers text inside title */
+  padding: 20px 20px;
+ 
+}
+
+/* ===== Title ===== */
+.seller-gettingstarted-title {
+  font-size: 20px !important;
+  font-weight: 700;
+  color: #111;
+  text-align: start !important;   
+  width: 100%;                   
+  max-width: 900px;              
+ 
+}
+
+
+/* ===== Card ===== */
+.seller-gettingstarted-card {
+  background-color: #fff;
+  border: 2px solid #d00f0f;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px !important;
+  margin: 20px auto !important; /* centers card */
+  text-align: left;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* ===== Links ===== */
+.seller-gettingstarted-link {
+  display: block;
+  text-decoration: none;
+  font-size: 18px !important;
+  color: #000;
+  font-weight: 500;
+  padding-bottom: 8px;
+  transition: all 0.3s ease;
+}
+
+.seller-gettingstarted-link:hover {
+  color: #ed3305;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .seller-gettingstarted-card {
+    padding: 30px 20px;
+  }
+
+  .seller-gettingstarted-title {
+    font-size: 24px !important;
+  }
+
+  .seller-gettingstarted-link {
+    font-size: 16px !important;
+  }
+}
+

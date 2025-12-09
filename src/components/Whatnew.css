@@ -1,0 +1,302 @@
+
+
+/* ===== MAIN CONTAINER ===== */
+.first {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  margin: 120px auto 0 auto;      /* ✅ 90px top margin, centered horizontally */
+  padding: 30px;
+  gap: 40px;
+  border: 3px solid #f39c12;
+  border-radius: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ======= LEFT SIDE TEXT BOX ======= */
+.text-box {
+  flex: 1;                          /* take equal width as image box */
+   
+  border-radius: 10px;
+  padding: 25px;
+ 
+  box-sizing: border-box;
+}
+
+.text-box h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  text-align: center;
+  
+}
+
+.text-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+    text-align: center;
+}
+
+/* ======= RIGHT SIDE IMAGE BOX ======= */
+.image-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.image-box img {
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  border: 3px solid #555;
+}
+
+/* ======= RESPONSIVE DESIGN ======= */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;         /* stack items vertically */
+    text-align: center;
+    gap: 25px;
+  }
+
+  .image-box img {
+    max-width: 90%;
+  }
+}
+
+.section {
+  width: 85%;
+  margin: 70px auto;          /* space from top & bottom, centered horizontally */
+  text-align: center;         /* ✅ center text */
+}
+
+.text-box p{
+  text-align: start;
+}
+
+.section h2 {
+  color: #222;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.section {
+  width: 85%;
+  margin: 70px auto;
+  text-align: center;
+  border-bottom: 2px solid #3498db; /* ✅ bottom line */
+  padding-bottom: 20px;              /* space above the line */
+}
+
+.section p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+  display: inline-block;  /* helps ensure centering works consistently */
+  text-align: start;
+}
+
+/* ===== Responsive (Mobile) ===== */
+@media (max-width: 768px) {
+  .section {
+    width: 90%;
+    margin: 50px auto;
+  }
+
+  .section h2 {
+    font-size: 24px;
+  }
+
+  .section p {
+    font-size: 15px;
+  }
+}
+
+
+/* ===== Container ===== */
+.two-row-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* 2 columns side by side */
+  grid-gap: 40px;                 /* space between items */
+  width: 85%;
+  margin: 80px auto;
+  text-align: center;
+}
+
+/* ===== Each Grid Item ===== */
+.grid-item {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #000;
+}
+
+
+/* ===== Image ===== */
+.grid-item img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Heading & Paragraph ===== */
+.grid-item h3 {
+  font-size: 22px;
+  color: #000;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.grid-item p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  text-align: center;
+
+  
+}
+
+/* ===== Responsive (Mobile) ===== */
+@media (max-width: 768px) {
+  .two-row-grid {
+    grid-template-columns: 1fr;   /* stack vertically on small screens */
+    width: 90%;
+  }
+
+  .grid-item img {
+    max-width: 80%;
+  }
+}
+
+/* ===== FAQ SECTION ===== */
+.faq-container {
+  width: 85%;
+
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+}
+
+.faq-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #222;
+
+  font-weight: 700;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ===== FAQ ITEM ===== */
+.faq-item {
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  padding: 20px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #ddd;
+}
+
+.faq-item:hover {
+  background-color: #eef3ff;
+  border-color: #007bff;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.1);
+}
+
+/* ===== QUESTION ===== */
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question h3 {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0;
+}
+
+.faq-question span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+  transition: transform 0.3s ease;
+}
+
+/* ===== ACTIVE STATE ===== */
+.faq-item.active .faq-question span {
+  transform: rotate(180deg);
+  color: #0056b3;
+}
+
+/* ===== ANSWER ===== */
+.faq-answer {
+  margin-top: 12px;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  overflow: hidden;
+  animation: expand 0.4s ease-in-out;
+}
+
+@keyframes expand {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.faq-answer p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .faq-container {
+    width: 95%;
+    padding: 25px;
+  }
+
+  .faq-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .faq-item {
+    padding: 15px 20px;
+  }
+
+  .faq-question h3 {
+    font-size: 1rem;
+  }
+
+  .faq-answer p {
+    font-size: 0.9rem;
+  }
+}
+

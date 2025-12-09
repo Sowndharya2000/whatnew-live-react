@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #000000 !important; /* force black */
+  color: white !important;              /* force white text */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.header-logo-img {
+  height: 70px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-left:50px ;
+    transition: transform 0.3s ease;
+  border-radius: 8px;   
+}
+
+
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav a {
+  color: white; /* White text */
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+.nav a:hover {
+  color: #fe3b00; /* Yellow on hover */
+}
+
+/* Mobile Menu Icon */
+.mobile-menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Mobile Responsive - slide menu from left */
+@media (max-width: 768px) {
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    left: -100%; /* hidden by default */
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+   
+    flex-direction: column;
+    background-color: #000000; /* Black background */
+    padding: 5rem 2rem 2rem;
+    gap: 2rem;
+    transition: left 0.3s ease;
+    z-index: 999;
+  }
+
+
+
+
+  .nav.active {
+    left: 0; /* slide in */
+  }
+
+  .nav a {
+    width: 100%;
+    text-align: left;
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+    color: white;
+  }
+
+  .header-logo-img {
+    height: 80px;
+    margin-left: 10px;
+   
+  }
+}
+
+/* Smaller devices adjustments */
+@media (max-width: 480px) {
+  .header-logo-img {
+    height:60px;
+      margin-right: 1.5rem;
+  }
+
+  .nav {
+    width: 80%;
+    padding: 4rem 1.5rem 2rem;
+  }
+
+  .nav a {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .header-logo-img {
+    height: 100px;
+  }
+
+  .nav {
+    width: 85%;
+    padding: 3.5rem 1rem 1.5rem;
+  }
+}
+
+
+
+/* ===== Sticky Header ===== */
+.header {
+  position: sticky;        /* stays fixed at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;           /* keeps header above everything */
+  background-color: #fff;  /* solid background */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Optional: add smooth scroll shadow change */
+.header.scrolled {
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+  position: fixed;           /* stays fixed while scrolling */
+
+  width: 100%;
+  z-index: 1000;             /* ensures it's above everything */
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.page  {
+  padding-top: 100px;
+   /* Prevents content hiding behind header */
+}
+
+
+

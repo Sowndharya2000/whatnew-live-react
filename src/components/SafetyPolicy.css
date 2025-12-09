@@ -1,0 +1,381 @@
+/* ===== GLOBAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}/* ===== Banner Section ===== */
+.banner-section {
+  width: calc(100% - 40px);
+  height: 300px;
+  background-image: url("https://help.whatnot.com/hc/theming_assets/01JV8AH6DVE2S4T1FTQ47FVFZB");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #fff;
+
+  /* ✅ Proper spacing */
+  margin: 12px 20px 20px 20px; /* top, right, bottom, left */
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-sizing: border-box;
+
+  /* ✅ Do NOT hide margins */
+  overflow: visible; 
+}
+
+/* ===== Overlay ===== */
+.banner-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+  border-radius: 15px;
+}
+
+/* Ensure content stays above overlay */
+.banner-section * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Breadcrumb ===== */
+.breadcrumb {
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.breadcrumb a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #ffd700; /* gold/yellow highlight */
+   
+}
+
+.breadcrumb span {
+  color: #ddd;
+}
+
+.breadcrumb span {
+  color: #ddd;
+}
+
+/* ===== Heading ===== */
+h1 {
+  font-size: 36px;
+  margin: 0;
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+/* ===== Paragraph ===== */
+p {
+  font-size: 18px;
+  margin: 0;
+  padding-top: 10px;
+  text-align: left;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .banner-section {
+    width: calc(100% - 20px);
+    height: 250px;
+    margin:120px 10px 10px 10px; /* ✅ keep top space on mobile too */
+    padding: 15px 20px;
+  }
+
+  .breadcrumb {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+    padding-bottom: 6px;
+  }
+
+  p {
+    font-size: 14px;
+    padding-top: 6px;
+  }
+}
+
+
+
+/* ===== General Policies Card — Full Width Getting Started Style ===== */
+.general-policies-card {
+  background-color: black; /* black background */
+  color: white; /* white text */
+  width: 100%; /* full width */
+  box-sizing: border-box; /* include padding in width */
+  padding: 16px;
+  margin: 10px 0; /* optional spacing between cards */
+  text-align: left;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Title ===== */
+.getting-started-container .general-policies-title {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+   text-transform: capitalize;
+}
+
+/* ===== Links ===== */
+.general-policies-link {
+  color: white;
+  display: block;
+  margin-bottom: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+   text-transform: capitalize;
+}
+
+.general-policies-link:hover {
+  color: rgb(218, 95, 95);
+}
+
+/* ===== Responsive ===== */
+/* Mobile devices (max-width: 600px) */
+@media (max-width: 600px) {
+  .general-policies-card {
+    padding: 12px;
+  }
+  .general-policies-link {
+    font-size: 14px;
+  }
+}
+
+/* Tablets (601px - 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .general-policies-card {
+    padding: 14px;
+  }
+  .general-policies-link {
+    font-size: 15px;
+  }
+}
+
+/* Desktops (901px and above) */
+@media (min-width: 901px) {
+  .general-policies-card {
+    padding: 16px;
+  }
+  .general-policies-link {
+    font-size: 16px;
+  }
+}
+/* ===== Fade In & Slide Up Animation ===== */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* start 20px below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* final position */
+  }
+}
+
+/* ===== Apply Animation to Card ===== */
+.general-policies-card {
+  background-color: black;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px;
+  margin: 10px 0;
+  text-align: left;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  /* Animation */
+  animation: fadeInUp 0.8s ease forwards; /* duration 0.8s */
+  opacity: 0; /* initial state */
+}
+
+/* ===== Animation Keyframes ===== */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* start 20px below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* final position */
+  }
+}
+
+/* ===== Buyer Policies Card — Full Width Getting Started Style with Fade In Up ===== */
+.buyer-policies-card {
+  background-color: black; /* black background */
+  color: white; /* white text */
+  width: 100%; 
+  box-sizing: border-box; 
+  padding: 16px;
+  margin: 10px 0; 
+  text-align: left;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  /* Animation */
+  opacity: 0; /* initial hidden */
+  animation: fadeInUp 0.8s ease forwards; /* fade in and slide up over 0.8s */
+}
+
+/* ===== Title ===== */
+.getting-started-container .buyer-policies-title {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+/* ===== Links ===== */
+.buyer-policies-link {
+  color: white;
+  display: block;
+  margin-bottom: 8px;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.buyer-policies-link:hover {
+  color: rgb(218, 95, 95);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .buyer-policies-card {
+    padding: 12px;
+  }
+  .buyer-policies-link {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .buyer-policies-card {
+    padding: 14px;
+  }
+  .buyer-policies-link {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 901px) {
+  .buyer-policies-card {
+    padding: 16px;
+  }
+  .buyer-policies-link {
+    font-size: 16px;
+  }
+}
+
+
+/* ===== Animation Keyframes ===== */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* start 20px below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* final position */
+  }
+}
+
+/* ===== Seller Policies Card — Full Width Getting Started Style with Fade In Up ===== */
+.seller-policies-card {
+  background-color: black; /* black background */
+  color: white; /* white text */
+  width: 100%; /* full width */
+  box-sizing: border-box; 
+  padding: 16px;
+  margin: 10px 0; 
+  text-align: left;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  /* Animation */
+  opacity: 0; /* start hidden */
+  animation: fadeInUp 0.8s ease forwards; /* fade in & slide up */
+}
+
+/* ===== Title ===== */
+.getting-started-container .seller-policies-title {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+/* ===== Links ===== */
+.seller-policies-link {
+  color: white;
+  display: block;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.seller-policies-link:hover {
+  color: rgb(218, 95, 95);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .seller-policies-card {
+    padding: 12px;
+  }
+  .seller-policies-link {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .seller-policies-card {
+    padding: 14px;
+  }
+  .seller-policies-link {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 901px) {
+  .seller-policies-card {
+    padding: 16px;
+  }
+  .seller-policies-link {
+    font-size: 16px;
+  }
+}

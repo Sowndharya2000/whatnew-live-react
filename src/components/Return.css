@@ -1,0 +1,268 @@
+/* ===== GLOBAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}/* ===== Banner Section ===== */
+.banner-section {
+  width: calc(100% - 40px);
+  height: 300px;
+  background-image: url("https://help.whatnot.com/hc/theming_assets/01JV8AH6DVE2S4T1FTQ47FVFZB");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #fff;
+
+  /* ✅ Proper spacing */
+  margin: 120px 10px 20px 20px; /* top, right, bottom, left */
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-sizing: border-box;
+
+  /* ✅ Do NOT hide margins */
+  overflow: visible; 
+}
+
+.banner-section {
+  margin-top: 105px !important;
+}
+
+/* ===== Overlay ===== */
+.banner-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+  border-radius: 15px;
+}
+
+/* Ensure content stays above overlay */
+.banner-section * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Breadcrumb ===== */
+.breadcrumb {
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.breadcrumb a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #ffd700; /* gold/yellow highlight */
+   
+}
+
+.breadcrumb span {
+  color: #ddd;
+}
+
+.breadcrumb span {
+  color: #ddd;
+}
+
+/* ===== Heading ===== */
+h1 {
+  font-size: 36px;
+  margin: 0;
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+/* ===== Paragraph ===== */
+p {
+  font-size: 18px;
+  margin: 0;
+  padding-top: 10px;
+  text-align: left;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* ===== Responsive Full Width for Mobile ===== */
+@media (max-width: 768px) {
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+.banner-section {
+  width: 100%;
+  margin: 0;       
+  padding: 15px 0; 
+  box-sizing: border-box;
+}
+
+
+
+
+ .breadcrumb {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .banner-section h1 {
+    font-size: 24px;
+    padding-bottom: 6px;
+    word-break: break-word;
+  }
+
+  .banner-section p {
+    font-size: 14px;
+    padding-top: 6px;
+    word-break: break-word;
+  }
+}
+
+.help-section {
+  background: #fff;
+  padding: 20px 30px;
+  max-width: 1200px;
+  margin-top: 30px;
+  margin: 0 auto 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #000;
+
+  border-radius: 10px;
+ 
+  transition: box-shadow 0.4s ease;
+}
+
+.help-content h3 {
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  letter-spacing: 0.03em;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+  border-bottom: 3px solid black;
+  animation: slideInUnderline 0.8s ease forwards;
+}
+
+@keyframes slideInUnderline {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+.help-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  letter-spacing: 0.015em;
+  text-align: justify;
+    max-width: 1200px;
+}
+
+.help-content ul {
+  list-style: decimal; /* numbered list */
+  padding-left: 30px;  /* spacing for numbers */
+  margin-bottom: 25px;
+  animation: fadeInList 1s ease forwards;
+  text-align: justify;
+}
+
+.help-content ul li {
+  position: relative;
+  margin-bottom: 14px;
+  padding-left: 0; /* remove extra left padding */
+  font-weight: 500;
+  color: #111;
+  line-height: 1.4;
+  text-align: justify;
+  letter-spacing: 0.015em;
+}
+
+/* Remove bullet styling added before */
+.help-content ul li::before {
+  content: none; 
+}
+
+
+@keyframes fadeInList {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles for all devices */
+@media (max-width: 1024px) {
+  .help-section {
+    padding: 20px 25px;
+    max-width: 90%;
+  }
+  .help-content h3 {
+    font-size: 1.4rem;
+  }
+  .help-content p,
+  .help-content ul li {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .help-section {
+    padding: 15px 20px;
+    max-width: 95%;
+  }
+  .help-content h3 {
+    font-size: 1.3rem;
+  }
+  .help-content p,
+  .help-content ul li {
+    font-size: 14px;
+
+  }
+}
+
+@media (max-width: 480px) {
+  .help-section {
+    padding: 15px 15px;
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+  .help-content h3 {
+    font-size: 1.1rem;
+  }
+  .help-content p,
+  .help-content ul li {
+    font-size: 13px;
+  }
+  .help-content ul li {
+    padding-left: 20px;
+  }
+  .help-content ul li::before {
+    width: 10px;
+    height: 10px;
+    top: 9px;
+  }
+}

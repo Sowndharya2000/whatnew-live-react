@@ -1,0 +1,215 @@
+/* ===== SUPPORT HELP SECTION — MATCHING ACCOUNT MANAGEMENT STYLE ===== */
+.support-section {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.support-content {
+  background: #fff;
+  padding: 30px 35px;
+  border-radius: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #000;
+  max-width: 1200px;
+
+  transition: box-shadow 0.4s ease;
+  animation: fadeUp 0.8s ease forwards;
+  opacity: 0;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.support-content:hover {
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+/* Headings */
+.support-content h1,
+.support-content h2 {
+  font-weight: 700;
+  font-size: 26px;
+  margin: 24px 0 16px;
+  letter-spacing: 0.03em;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+  border-bottom: 3px solid #000;
+  animation: fadeUp 0.9s ease forwards, slideInUnderline 0.9s ease forwards;
+  opacity: 0;
+  text-transform: capitalize;
+  color: #000;
+}
+
+.support-content h3 {
+  font-weight: 600;
+  font-size: 20px;
+  margin: 20px 0 12px;
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #111;
+}
+
+/* Paragraphs */
+.support-content p,
+.support-content .note {
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.015em;
+  text-align: justify;
+  max-width: 1200px;
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+  color: #111;
+}
+
+/* Lists */
+.support-content ul,
+.support-content ol {
+  padding-left: 30px;
+  margin-bottom: 15px;
+  text-align: justify;
+  animation: fadeUp 1.1s ease forwards;
+  opacity: 0;
+}
+
+.support-content ul { list-style: disc; }
+.support-content ol { list-style: decimal; }
+
+.support-content li ul {
+  margin-top: 8px;
+  padding-left: 20px;
+  list-style: circle;
+}
+
+.support-content li {
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #111;
+  line-height: 1.4;
+  letter-spacing: 0.015em;
+  animation: fadeUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+/* NOTE block */
+.support-content .note {
+  background: #f7f7f7;
+  padding: 10px 14px;
+  border-left: 3px solid #000;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+/* Links */
+.support-content a {
+  color: #000;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* --- ANIMATIONS --- */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInUnderline {
+  0% { width: 0; opacity: 0; }
+  100% { width: 100%; opacity: 1; }
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+  .support-content { padding: 25px 28px; max-width: 90%; }
+  .support-content h1,
+  .support-content h2 { font-size: 1.4rem; }
+  .support-content p,
+  .support-content li { font-size: 15px; }
+  .support-content ol { padding-left: 25px; }
+}
+
+@media (max-width: 768px) {
+  .support-content { padding: 20px 20px; max-width: 95%; }
+  .support-content h1,
+  .support-content h2 { font-size: 1.3rem; }
+  .support-content p,
+  .support-content li { font-size: 14px; }
+}
+
+@media (max-width: 480px) {
+  .support-content { padding: 15px 15px; max-width: 100%; margin-bottom: 30px; }
+  .support-content h1,
+  .support-content h2 { font-size: 1.1rem; }
+  .support-content p,
+  .support-content li { font-size: 13px; }
+  .support-content ul,
+  .support-content ol { padding-left: 22px; }
+}
+
+
+
+/* ===== Manage Account Section ===== */
+.manage-account-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 20px;
+ 
+}
+
+/* ===== Title ===== */
+.manage-account-title {
+  font-size: 20px !important;
+  font-weight: 700;
+  color: #111;
+  text-align: start !important;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* ===== Card ===== */
+.manage-account-card {
+  
+  border: 2px solid #00aaff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px !important;
+  margin: 20px auto !important;
+  text-align: left;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* ===== Links ===== */
+.manage-account-link {
+  display: block;
+  text-decoration: none;
+  font-size: 18px !important;
+  color: #000;
+  font-weight: 500;
+  padding-bottom: 8px;
+  transition: all 0.3s ease;
+}
+
+.manage-account-link:hover {
+  color: #fd7a0f;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .manage-account-card {
+    padding: 30px 20px;
+  }
+
+  .manage-account-title {
+    font-size: 24px !important;
+  }
+
+  .manage-account-link {
+    font-size: 16px !important;
+  }
+}

@@ -1,0 +1,347 @@
+/* ===== GLOBAL TEXT CAPITALIZATION ===== */
+h1, h2, h3, h4, h5, h6, p {
+  text-transform: capitalize;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+body, html {
+  overflow-x: hidden;
+}
+
+/* ===== Banner Section ===== */
+.banner-section {
+  width: 100%;
+  max-width: 100%;
+  height: 300px;
+  background-image: url("https://help.whatnot.com/hc/theming_assets/01JV8AH6DVE2S4T1FTQ47FVFZB");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #fff;
+
+  /* Use padding instead of margin to avoid collapsing issues */
+  padding: 50px 20px; /* 50px top and bottom */
+  box-sizing: border-box;
+
+  border-radius: 0;
+  overflow: hidden;
+}
+
+/* ===== Overlay ===== */
+.banner-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+/* Ensure content stays above overlay */
+.banner-section * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Breadcrumb ===== */
+.breadcrumb {
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: left;
+  padding-left: 10px; 
+}
+
+.breadcrumb a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #ffd700;
+}
+
+.breadcrumb span {
+  color: #ddd;
+}
+
+/* ===== Heading ===== */
+.banner-section h1 {
+  font-size: 36px;
+  margin: 0;
+  padding-bottom: 10px;
+  text-align: left;
+  padding-left: 10px; 
+}
+
+/* ===== Paragraph ===== */
+.banner-section p {
+  font-size: 18px;
+  margin: 0;
+  padding-top: 10px;
+  text-align: left;
+  max-width: 600px;
+  line-height: 1.6;
+  padding-left: 10px; 
+}
+/* Remove parent container padding/margin */
+.container,
+.container-fluid,
+.page-section,
+.page-container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.banner-section {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+/* Banner full width */
+.banner-section {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin: 0 !important;
+  padding-left: 10px; 
+  padding-right: 10px;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+
+@media (max-width: 768px) {
+
+  /* Remove padding from parent containers */
+  .container,
+  .container-fluid,
+  .page-section,
+  .page-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Banner full width, no border-radius */
+  .banner-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block;
+    border-radius: 0 !important; /* remove rounding */
+  }
+
+  .breadcrumb {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+ .banner-section .breadcrumb {
+    padding-left: 10px;
+    padding-right: 0; 
+    padding-bottom: 10px; 
+    margin: 0;         
+  }
+
+  /* Optional: make the links inside breadcrumb scale nicely */
+  .banner-section .breadcrumb a {
+    font-size: 14px;
+    padding-left: 0;    
+    padding-right: 0;
+  }
+  .banner-section  h1 {
+    font-size: 24px;
+    padding-left: 10px;
+    padding-bottom: 6px;
+  }
+
+  .banner-section p {
+    font-size: 14px;
+    padding-left: 10px !important;
+    padding-top: 6px;
+  }
+}
+.getting-started-card {
+  background-color: black;
+  color: white;
+  padding: 16px;
+
+ 
+}
+.getting-started-container .getting-started-title {
+  margin-top: 20px;
+}
+
+.getting-started-link {
+  color: white;
+  display: block;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+
+.getting-started-link:hover {
+  color: rgb(218, 95, 95);
+  
+}
+/* Mobile devices (max-width: 600px) */
+@media (max-width: 600px) {
+  .getting-started-card {
+    padding: 12px;
+  }
+
+  .getting-started-link {
+    font-size: 14px;
+  }
+}
+
+/* Tablets (min-width: 601px and max-width: 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .getting-started-card {
+    padding: 14px;
+  }
+
+  .getting-started-link {
+    font-size: 15px;
+  }
+}
+
+/* Desktops and larger (min-width: 901px) */
+@media (min-width: 901px) {
+  .getting-started-card {
+    padding: 16px;
+  }
+
+  .getting-started-link {
+    font-size: 16px;
+  }
+}
+
+/* Listing Card */
+.listing-card {
+  background-color: black;  
+  color: white;
+  padding: 16px;
+  
+}
+
+/* Links inside the card */
+.listing-link {
+  color: white;
+  display: block;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+
+.listing-link:hover {
+  color: rgb(218, 95, 95);  
+}
+
+/* Mobile devices (max-width: 600px) */
+@media (max-width: 600px) {
+  .listing-card {
+    padding: 12px;
+  }
+
+  .listing-link {
+    font-size: 14px;
+  }
+}
+
+/* Tablets (min-width: 601px and max-width: 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .listing-card {
+    padding: 14px;
+  }
+
+  .listing-link {
+    font-size: 15px;
+  }
+}
+
+/* Desktops and larger (min-width: 901px) */
+@media (min-width: 901px) {
+  .listing-card {
+    padding: 16px;
+  }
+
+  .listing-link {
+    font-size: 16px;
+  }
+}
+
+/* Going Live Card */
+.going-live-card {
+  background-color: black;  
+  color: white;
+  padding: 16px;
+  margin-bottom: 20px;
+
+}
+
+/* Links inside the card */
+.going-live-link {
+  color: white;
+  display: block;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+
+.going-live-link:hover {
+  color: rgb(218, 95, 95);  
+}
+
+/* Mobile devices (max-width: 600px) */
+@media (max-width: 600px) {
+  .going-live-card {
+    padding: 12px;
+  }
+
+  .going-live-link {
+    font-size: 14px;
+  }
+}
+
+/* Tablets (min-width: 601px and max-width: 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .going-live-card {
+    padding: 14px;
+  }
+
+  .going-live-link {
+    font-size: 15px;
+  }
+}
+
+/* Desktops and larger (min-width: 901px) */
+@media (min-width: 901px) {
+  .going-live-card {
+    padding: 16px;
+  }
+
+  .going-live-link {
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+
+
+

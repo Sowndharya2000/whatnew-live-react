@@ -1,0 +1,223 @@
+/* Banner Image */
+.banner-image {
+  width: 100%; /* Box width */
+  height: 300px; /* Box height */
+  background-image: url('https://aviraltrendzpvtltd.com/wp-content/uploads/2024/06/istockphoto-1365543480-640x640-1.jpg');
+  background-size: cover;       /* Cover entire div */
+  background-position: center;  /* Center the image */
+  background-repeat: no-repeat;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertical center */
+  align-items: center;     /* Horizontal center */
+  
+  text-align: center;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  
+  border: 5px solid white;           /* Border */
+  border-radius: 20px;               /* Rounded corners */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    margin: 0; /* Removes white space */
+}
+
+.banner-image h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.banner-image p {
+  font-size: 20px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+  box-sizing: border-box;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* Left Form */
+.contact-left {
+  flex: 1;
+  min-width: 300px;
+  height: 500px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-left h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-left form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-left input,
+.contact-left textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-left button {
+  padding: 12px;
+  background-color: #00a8ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-left button:hover {
+  background-color: #0080cc;
+}
+
+/* Right Map */
+.contact-right {
+  flex: 1;
+  min-width: 300px;
+  height: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+  }
+  .contact-left,
+  .contact-right {
+    height: 400px;
+  }
+ 
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .banner-image {
+    height: 200px;            /* Adjust height for tablets */
+    border-radius: 15px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-image {
+    height: 150px;            /* Adjust height for small screens */
+    border-radius: 10px;
+    padding: 5px;
+  }
+}
+
+/* ===== Banner Image ===== */
+.banner-image {
+  width: 100%;
+  min-height: 300px;
+  background-image: url('https://aviraltrendzpvtltd.com/wp-content/uploads/2024/06/istockphoto-1365543480-640x640-1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+
+  border: 5px solid #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+margin-top: 100px; /* centers banner horizontally */
+}
+
+/* Text inside banner */
+.banner-image h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.banner-image p {
+  font-size: 20px;
+}
+
+/* ===== Responsive Design ===== */
+
+/* Tablets */
+@media (max-width: 900px) {
+  .banner-image {
+    min-height: 220px;
+    border-radius: 15px;
+    padding: 15px;
+  }
+
+  .banner-image h1 {
+    font-size: 32px;
+  }
+
+  .banner-image p {
+    font-size: 16px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+  .banner-image {
+    min-height: 180px;
+    border-radius: 12px;
+    padding: 10px;
+  }
+
+  .banner-image h1 {
+    font-size: 24px;
+  }
+
+  .banner-image p {
+    font-size: 14px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 400px) {
+  .banner-image {
+    min-height: 150px;
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+  .banner-image h1 {
+    font-size: 18px;
+  }
+
+  .banner-image p {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,248 @@
+/* Working Section */
+.Working {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 30px !important;
+  max-width: 1500px;
+  margin: 105px auto 20px !important;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  animation: fadeInUp 2s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.Working h1 {
+  font-size: 30px;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+}
+
+.Working p {
+  font-size: 20px;
+  line-height: 1.8;
+  text-align: justify;
+  text-transform: capitalize;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Flicker effect for heading */
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+  20%, 22%, 24%, 55% { opacity: 0.4; }
+}
+
+/* Paragraph pulse */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 599px) {
+  .Working h1 {
+    font-size: 22px;
+    text-align: justify;
+  }
+  .Working p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .Working {
+    padding: 18px 25px;
+    margin: 0 auto 20px; 
+  }
+  .Working h1 {
+    font-size: 26px;
+    letter-spacing: 2.5px;
+  }
+  .Working p {
+    font-size: 18px;
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 900px) {
+  .Working {
+    padding: 20px 30px;
+    margin: 0 auto 20px;
+  }
+  .Working h1 {
+    font-size: 30px;
+    letter-spacing: 3px;
+  }
+  .Working p {
+    font-size: 20px;
+    max-width: 600px;
+  }
+}
+
+/* ================= SECTION 2: WORKING-SECTION (QUOTES) ================= */
+
+.working-section {
+  background-color: #000;
+  color: #fff;
+  max-width: 1500px;
+  margin-bottom: 10px !important;
+  padding: 20px 32px;
+  margin: 0 auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border: 1px solid #222;
+
+  /* Fade-In Up Animation */
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeInUp 1.4s ease forwards;
+}
+
+/* Heading */
+.working-section h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 18px;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+
+  /* Fade-in slight delay */
+  opacity: 0;
+  animation: fadeInUp 1.4s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* Intro paragraph */
+.working-section > p {
+  font-size: 20px;
+  line-height: 1.7;
+  color: #dcdcdc;
+  max-width: 1400px;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+
+  opacity: 0;
+  animation: fadeInUp 1.4s ease forwards;
+  animation-delay: 0.35s;
+}
+
+/* Quotes container */
+.working-quotes {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Quote boxes */
+.working-quotes blockquote {
+  padding: 18px 22px;
+  border-left: 3px solid #fff;
+  background-color: #0f0f0f;
+  color: #f2f2f2;
+  font-style: italic;
+  line-height: 1.6;
+  padding-left: 40px;
+
+  /* Fade-up stagger effect */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.4s ease forwards;
+}
+
+/* Stagger the quotes */
+.working-quotes blockquote:nth-child(1) { animation-delay: 0.45s; }
+.working-quotes blockquote:nth-child(2) { animation-delay: 0.65s; }
+.working-quotes blockquote:nth-child(3) { animation-delay: 0.85s; }
+
+/* Quote text */
+.working-quotes blockquote p {
+  text-align: start;
+  font-size: 20px;
+  max-width: 1400px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+/* Author */
+.working-quotes blockquote footer {
+  font-style: normal;
+  font-weight: 600;
+  color: #bbb;
+  font-size: 18px;
+  text-align: start;
+  text-transform: capitalize;
+}
+
+/* ------------ ANIMATION KEYFRAMES ------------ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 992px) {
+  .working-section h2 {
+    font-size: 28px;
+  }
+  .working-section > p {
+    font-size: 18px;
+  }
+  .working-quotes blockquote p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .working-section {
+    padding: 20px;
+  }
+  .working-section h2 {
+    font-size: 26px;
+  }
+  .working-section > p {
+    font-size: 17px;
+  }
+  .working-quotes blockquote {
+    padding: 16px 18px;
+    border-left-width: 2px;
+  }
+  .working-quotes blockquote p {
+    font-size: 17px;
+  }
+  .working-quotes blockquote footer {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .working-section h2 {
+    font-size: 22px;
+  }
+  .working-section > p {
+    font-size: 16px;
+  }
+  .working-quotes blockquote p {
+    font-size: 16px;
+  }
+  .working-quotes blockquote footer {
+    font-size: 15px;
+  }
+}
